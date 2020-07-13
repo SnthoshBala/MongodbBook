@@ -1,12 +1,12 @@
 package com.spring.bookmongo.model;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "books")
 public class Book {
 
-    @Id
+    @MongoId
     private int id;
     private String title;
     private String author;
