@@ -25,11 +25,11 @@ public class BookService {
         return repository.findAll();
     }
 
-    public Book getBookById(Integer id) {
+    public Book getBookById(String id) {
         return repository.findById(id).orElse(null);
     }
 
-    public String deleteBook(Integer id) {
+    public String deleteBook(String id) {
         repository.deleteById(id);
         return "Book removed !! " + id;
     }
