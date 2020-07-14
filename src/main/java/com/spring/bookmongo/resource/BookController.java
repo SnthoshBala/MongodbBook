@@ -11,6 +11,13 @@ import java.util.List;
 @RestController
 public class BookController {
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            // ...
+            .csrf().disable();
+    }
+    
     @Autowired
     private BookService service;
 
