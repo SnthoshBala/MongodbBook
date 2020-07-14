@@ -10,13 +10,6 @@ import java.util.List;
 @CrossOrigin(origins="https://booklist-bala.herokuapp.com")
 @RestController
 public class BookController {
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            // ...
-            .csrf().disable();
-    }
     
     @Autowired
     private BookService service;
